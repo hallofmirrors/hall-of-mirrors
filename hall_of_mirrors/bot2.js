@@ -377,9 +377,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/PowerOfMad/bot/master/blacklists/NSFW.json',
-                OP: 'https://rawgit.com/PowerOfMad/bot/master/blacklists/OP.json',
-                BANNED: 'https://rawgit.com/PowerOfMad/bot/master/blacklists/BANNED.json'
+                NSFW: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/NSFW.json',
+                OP: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/OP.json',
+                BANNED: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/BANNED.json'
             }
         },
         room: {
