@@ -311,7 +311,7 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: 'Dack Janiels',
-            language: 'lithuanian',
+            language: 'english',
             chatLink: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/lt.json',
             scriptLink: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/bot2.js',
             roomLock: false, // Requires an extension to re-load the script
