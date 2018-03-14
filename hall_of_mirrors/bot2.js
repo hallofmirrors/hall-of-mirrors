@@ -163,7 +163,7 @@
     var loadChat = function(cb) {
         if (!cb) cb = function() {
         };
-        $.get('https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/lt.json', function(json) {
+        $.get('https://dl.dropboxusercontent.com/s/w19u72ht0d2jxkb/lt.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
