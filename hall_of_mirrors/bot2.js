@@ -163,7 +163,7 @@
     var loadChat = function(cb) {
         if (!cb) cb = function() {
         };
-        $.get('https://dl.dropboxusercontent.com/s/w19u72ht0d2jxkb/lt.json', function(json) {
+        $.get('https://dl.dropboxusercontent.com/s/2j4lxvl5srdr5rl/lt.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -310,10 +310,10 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'Dack Janiels',
+            botName: 'Patrauklus šokėjas v.2.0',
             language: 'english',
-            chatLink: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/lt.json',
-            scriptLink: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/bot2.js',
+            chatLink: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/lt.json',
+            scriptLink: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/bot2.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 50, // 1-200
             startupVolume: 15, // 0-100
@@ -377,9 +377,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/NSFW.json',
-                OP: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/OP.json',
-                BANNED: 'https://rawgit.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/BANNED.json'
+                NSFW: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/NSFW.json',
+                OP: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/OP.json',
+                BANNED: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/BANNED.json'
             }
         },
         room: {
@@ -448,7 +448,7 @@
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function() {
                         basicBot.room.roulette.endRoulette();
-                    }, 120 * 1000);
+                    }, 60 * 1000);
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function() {
@@ -1521,7 +1521,7 @@
             }, 60 * 60 * 1000);
             basicBot.room.autorouletteInterval = setInterval(function() {
                 basicBot.room.autorouletteFunc();
-            }, 45 * 60 * 1000);
+            }, 30 * 60 * 1000);
             basicBot.room.naktis = setInterval(function () {
             var naktis = new Date();
             if (naktis.getHours() === 1 && naktis.getMinutes() === 30 && naktis.getSeconds() === 0) {
@@ -2814,7 +2814,7 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+                        $.get('https://raw.githack.com/hallofmirrors/source/master/lang/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
