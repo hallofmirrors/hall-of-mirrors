@@ -1,7 +1,5 @@
 /**
-
  Copyright © 2014-2017 basicBot
-
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
  
@@ -107,7 +105,6 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
-
     var sendToSocket = function () {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -120,11 +117,8 @@
     };*/
      /*       /*pass*/
      /*     var password;
-
     var pass1='ragezasmldc';
-
     password=prompt('Įveskite slaptažodį!'' ');
-
    if (password==pass1)
      alert('Slaptažodis teisingas!');
     else
@@ -163,7 +157,7 @@
     var loadChat = function(cb) {
         if (!cb) cb = function() {
         };
-        $.get('https://dl.dropboxusercontent.com/s/2j4lxvl5srdr5rl/lt.json', function(json) {
+        $.get('https://dl.dropboxusercontent.com/s/w19u72ht0d2jxkb/lt.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -310,10 +304,10 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'Patrauklus šokėjas v.2.0',
+            botName: 'Dack Janiels',
             language: 'english',
-            chatLink: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/lt.json',
-            scriptLink: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/bot2.js',
+            chatLink: 'https://raw.githack.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/lt.json',
+            scriptLink: 'https://raw.githack.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/bot2.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 50, // 1-200
             startupVolume: 15, // 0-100
@@ -377,9 +371,9 @@
             songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/NSFW.json',
-                OP: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/OP.json',
-                BANNED: 'https://raw.githack.com/hallofmirrors/hall-of-mirrors/master/hall_of_mirrors/blacklists/BANNED.json'
+                NSFW: 'https://raw.githack.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/NSFW.json',
+                OP: 'https://raw.githack.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/OP.json',
+                BANNED: 'https://raw.githack.com/dansinge/hall-of-mirrors/master/hall_of_mirrors/blacklists/BANNED.json'
             }
         },
         room: {
@@ -1613,7 +1607,6 @@
                         if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                         if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                         else{
-
                           }
                         }
                 },
@@ -2267,9 +2260,7 @@
             },
 
             /*
-
             // This does not work anymore.
-
             deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
@@ -2290,18 +2281,15 @@
                         for (var i = 0; i < chats.length; i++) {
                             var n = from[i].textContent;
                             if (name.trim() === n.trim()) {
-
                                 // var messagecid = $(message)[i].getAttribute('data-cid');
                                 // var emotecid = $(emote)[i].getAttribute('data-cid');
                                 // API.moderateDeleteChat(messagecid);
-
                                 // try {
                                 //     API.moderateDeleteChat(messagecid);
                                 // }
                                 // finally {
                                 //     API.moderateDeleteChat(emotecid);
                                 // }
-
                                 if (typeof $(message)[i].getAttribute('data-cid') == 'undefined'){
                                     API.moderateDeleteChat($(emote)[i].getAttribute('data-cid')); // works well with normal messages but not with emotes due to emotes and messages are seperate.
                                 } else {
@@ -2313,7 +2301,6 @@
                     }
                 }
             },
-
             */
 
             deletechatCommand: {
@@ -2814,7 +2801,7 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://raw.githack.com/hallofmirrors/source/master/lang/langIndex.json', function(json) {
+                        $.get('https://raw.githack.com/basicBot/source/master/lang/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
